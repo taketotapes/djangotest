@@ -1,0 +1,35 @@
+<!-- books/base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Library{% endblock %}</title>
+    <!-- Вставте ваші стилі та скрипти, якщо вони є -->
+</head>
+<body>
+
+<header>
+    <h1>{% block header %}My Library{% endblock %}</h1>
+    <!-- Додайте інші елементи заголовка за необхідності -->
+</header>
+
+<nav>
+    <ul>
+        <li><a href="{% url 'authors_list' %}">Authors</a></li>
+        <li><a href="{% url 'books_list' %}">Books</a></li>
+        <!-- Додайте інші посилання за необхідності -->
+    </ul>
+</nav>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer>
+    <!-- Додайте елементи підвалу за необхідності -->
+</footer>
+
+</body>
+</html>
